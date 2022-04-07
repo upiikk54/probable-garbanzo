@@ -41,12 +41,24 @@ class Car {
 
   render() {
     return `
-      <p>id: <b>${this.id}</b></p>
-      <p>plate: <b>${this.plate}</b></p>
-      <p>manufacture: <b>${this.manufacture}</b></p>
-      <p>model: <b>${this.model}</b></p>
-      <p>available at: <b>${this.availableAt}</b></p>
-      <img src="${this.image}" alt="${this.manufacture}" width="64px">
+    <div class="card " style ="margin-top: 2rem" >
+    <img src="${this.image}" class="card-img-top" alt="" style="height: 250px">
+    <div class="card-body">
+      <p>${this.model} / ${this.manufacture}</p>
+      <h5 class="card-title bold">Rp ${this.rentPerDay} / hari</h5>
+      <p class="card-text">${this.description}</p>
+        <div class="">
+          <img src="images-landingpage/fi_users.png" alt="" class="me-2 ">${this.capacity} Orang
+        </div>
+        <div class="pt-2">
+          <img src="images-landingpage/fi_settings.png" alt="" class="me-2 ">${this.transmission}
+        </div>
+        <div class="pt-2">
+          <img src="images-landingpage/fi_calendar.png" alt="" class="me-2 ">Tahun ${this.year}
+        </div>
+        <button class="btn bg-btn bold mt-3 w-100">Pilih Mobil</button>
+    </div>
+  </div>
     `;
   }
 }
